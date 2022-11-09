@@ -91,3 +91,13 @@ console.log(sortHobbits(users));
 
 // Exercise 6 Section
 console.log("EXERCISE 6:\n==========\n");
+
+function avgHobbitScore(hobbitArray) {
+    let sumOfScores = hobbitArray.reduce((previousValue, hobbit) => {
+        return previousValue + hobbit.score;
+    }, 0)
+    let avgScore = sumOfScores / hobbitArray.length;
+    return avgScore
+}
+
+console.log(avgHobbitScore(users));
